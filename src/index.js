@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
@@ -24,9 +24,9 @@ const app = (
   </Provider>
 )
 
-ReactDOM.render(
+render(
   <React.StrictMode>
-    <App />
+    { app }
   </React.StrictMode>,
   document.getElementById('root')
 );
